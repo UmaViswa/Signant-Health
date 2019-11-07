@@ -28,7 +28,7 @@ if __name__=="__main__":
     else:
         print R.content
     P = put_username()
-    if P.status_code != 200:
+    if P.status_code != 201:
         print "Fail"
     else:
         print P.content
