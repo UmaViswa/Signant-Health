@@ -23,8 +23,17 @@ def get_userdetails():
 
 if __name__=="__main__":
     R = get_usernames()
-    print R.content
+    if R.status_code != 200:
+        print "Fail"
+    else:
+        print R.content
     P = put_username()
-    print P.content
+    if P.status_code != 200:
+        print "Fail"
+    else:
+        print P.content
     U = get_userdetails()
-    print U.content
+    if U.status_code != 200:
+        print "Fail"
+    else:
+        print U.content
